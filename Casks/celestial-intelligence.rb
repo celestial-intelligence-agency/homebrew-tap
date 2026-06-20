@@ -2,7 +2,8 @@ cask "celestial-intelligence" do
   version "0.1.0"
   sha256 "21115e016bdf887346b7b6fa29f6a982968332fa3a37bfd3626b0c38c7ded0fb"
 
-  url "https://github.com/celestial-intelligence-agency/celestial-orchestration/releases/download/desktop-v#{version}/celestial-intelligence-desktop-aarch64-desktop-v#{version}.dmg"
+  url "https://github.com/celestial-intelligence-agency/celestial-orchestration/releases/download/desktop-v#{version}/celestial-intelligence-desktop-aarch64-desktop-v#{version}.dmg",
+      verified: "github.com/celestial-intelligence-agency/"
   name "Celestial Intelligence"
   desc "Operational console for the Celestial Intelligence platform"
   homepage "https://celestialintelligence.co/"
