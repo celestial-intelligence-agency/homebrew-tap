@@ -1,6 +1,6 @@
 cask "attache" do
   version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "23121168bea57e95001ade9eed19de9c98494513dd5a6318ae30de812f485f13"
 
   url "https://github.com/dasysad/attache/releases/download/desktop-v#{version}/attache-desktop-aarch64-desktop-v#{version}.dmg"
   name "Attache"
@@ -23,8 +23,5 @@ cask "attache" do
     If macOS shows "Attache.app is damaged and can't be opened", run:
       xattr -cr "/Applications/Attache.app"
     Or install with: brew install --cask attache --no-quarantine
-
-    The pinned sha256 is updated automatically after each desktop-v* release.
-    Until the first release is published, `brew install --cask attache` will fail checksum verification.
   EOS
 end
