@@ -16,11 +16,14 @@ class LensCli < Formula
     # into libexec and write a thin bash wrapper in bin/.
     libexec.install Dir["*"]
 
+    # Do NOT cd into libexec before exec — lens.mjs reads process.cwd()
+    # at startup to locate lens.config.ts / lens.theme.css / stories/.
+    # Invoke node with the absolute path so cwd stays as the user's dir.
+    # Node still resolves node_modules via lens.mjs's script location.
     (bin/"lens").write <<~EOS
       #!/bin/bash
       export PATH="#{Formula["node@22"].opt_bin}:$PATH"
-      cd "#{libexec}"
-      exec node bin/lens.mjs "$@"
+      exec node "#{libexec}/bin/lens.mjs" "$@"
     EOS
   end
 
