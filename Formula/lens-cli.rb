@@ -1,26 +1,19 @@
 class LensCli < Formula
   desc "Web-component-first design-system gallery (@celestial/lens-cli)"
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
+  url "https://downloads.celestialintelligence.co/lens-cli/lens-v0.1.0/lens-cli-aarch64.tar.gz"
   version "0.1.0"
+  sha256 "3aa52ee9b909e258725820212f2ee012979e1e6d0d0b70dc40e994df63ecac60"
   license "MIT"
 
-  on_arm do
-    url "https://downloads.celestialintelligence.co/lens-cli/lens-v#{version}/lens-cli-aarch64.tar.gz"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-  end
-
-  on_intel do
-    url "https://downloads.celestialintelligence.co/lens-cli/lens-v#{version}/lens-cli-x86_64.tar.gz"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-  end
-
   depends_on "node@22"
+  depends_on arch: :arm64
 
   def install
     # Tarball contains a pnpm-deployed @celestial/lens-cli with its
-    # per-arch resolved node_modules (built on the matching macOS runner
-    # per build-lens-cli.yml). Brew has already extracted it; move
-    # everything into libexec and write a thin bash wrapper in bin/.
+    # arm64-resolved node_modules (built on macos-latest per
+    # build-lens-cli.yml). Brew has already extracted it; move everything
+    # into libexec and write a thin bash wrapper in bin/.
     libexec.install Dir["*"]
 
     (bin/"lens").write <<~EOS
