@@ -3,7 +3,7 @@ class HarnessCli < Formula
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
   url "https://downloads.celestialintelligence.co/harness-cli/harness-v0.1.0/harness-cli-aarch64.tar.gz"
   version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "fc3cff14ee72a90fe188ee21f8530f8ffcefb55d4efcd5b51431298170834875"
   license "MIT"
 
   depends_on "node@22"
