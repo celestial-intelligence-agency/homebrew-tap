@@ -1,8 +1,8 @@
 class HarnessCli < Formula
   desc "Federated harness search + install (ADR-050 Phase 4) — `celestial-harness` (and `ch` alias)"
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
-  url "https://downloads.celestialintelligence.co/harness-cli/harness-v0.1.0/harness-cli-aarch64.tar.gz"
   version "0.1.0"
+  url "https://downloads.celestialintelligence.co/harness-cli/harness-v#{version}/harness-cli-aarch64.tar.gz"
   sha256 "fc3cff14ee72a90fe188ee21f8530f8ffcefb55d4efcd5b51431298170834875"
   license "MIT"
 
