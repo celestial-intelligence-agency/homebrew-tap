@@ -3,7 +3,7 @@ class Geodesic < Formula
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
   url "https://downloads.celestialintelligence.co/geodesic/geodesic-v0.1.0/geodesic-aarch64.tar.gz"
   version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "d7ee46be02d82d26d56c1e294f6d4ec4ddda39ecaada7254118a0910f829e138"
   license "MIT"
 
   depends_on "node@22"
