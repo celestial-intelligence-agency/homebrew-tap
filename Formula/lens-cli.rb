@@ -1,9 +1,9 @@
 class LensCli < Formula
   desc "Web-component-first design-system gallery (@celestial/lens-cli)"
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
-  version "0.1.0"
+  version "0.1.1"
   url "https://downloads.celestialintelligence.co/lens-cli/lens-v#{version}/lens-cli-aarch64.tar.gz"
-  sha256 "3aa52ee9b909e258725820212f2ee012979e1e6d0d0b70dc40e994df63ecac60"
+  sha256 "802a7b22dbfee0e188fa915ebddc2553d2b5ae5a8baf1b0e0831c50baa98ebe1"
   license "MIT"
 
   depends_on "node@22"
