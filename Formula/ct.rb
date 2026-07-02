@@ -3,7 +3,7 @@ class Ct < Formula
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
   url "https://downloads.celestialintelligence.co/ct/ct-v0.1.0/ct-aarch64.tar.gz"
   version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "2d42f605f98fc42a18c3acf281ddbb974d8605604681a76394e7a75faea0c1e7"
   license "MIT"
 
   depends_on "node@22"
