@@ -3,7 +3,7 @@ class StarsystemCli < Formula
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
   url "https://downloads.celestialintelligence.co/starsystem-cli/ss-v0.1.0/starsystem-cli-aarch64.tar.gz"
   version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "4a201033f89644dc07ec16a736c3f98509b0b68bba187e1afa35363299274be7"
   license "MIT"
 
   depends_on "node@22"
