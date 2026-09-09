@@ -1,9 +1,9 @@
 class Geodesic < Formula
   desc "Agent-facing CLI for the Geodesic workspace API (`geodesic` and `geo` alias)"
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
-  version "0.1.1"
+  version "0.2.0"
   url "https://downloads.celestialintelligence.co/geodesic/geodesic-v#{version}/geodesic-aarch64.tar.gz"
-  sha256 "213224e79211b17b9b15dba202ae12bce4adc9c15c3999a0de29b64438d4ed1e"
+  sha256 "8b3e40c5d776f3b4c7c25d40edd5d4904062602e6b76a49686770ff964c356a8"
   license "MIT"
 
   depends_on "node@22"
