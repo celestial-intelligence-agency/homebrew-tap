@@ -1,9 +1,9 @@
 class Celestiald < Formula
   desc "Celestial composition daemon — serves the dashboard, routes to product daemons, runs orbit's supervision loop (ADR-102)"
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
-  version "0.1.5"
+  version "0.1.6"
   url "https://downloads.celestialintelligence.co/celestiald/celestiald-v#{version}/celestiald-aarch64.tar.gz"
-  sha256 "74c7091d61108d18049cbadc39c3b2e1ca675e7ce4c47da90c42e3585b61499e"
+  sha256 "76a81961d93938fba78fef82a8aff118663e3418edc400a587664952db89bbce"
   license "MIT"
 
   depends_on "node@22"
