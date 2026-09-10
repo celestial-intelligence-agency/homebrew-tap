@@ -1,9 +1,9 @@
 class StarsystemCli < Formula
   desc "Starsystem infrastructure control-plane CLI — `ss` (and `starsystem` alias)"
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
-  version "0.2.6"
+  version "0.2.7"
   url "https://downloads.celestialintelligence.co/starsystem-cli/ss-v#{version}/starsystem-cli-aarch64.tar.gz"
-  sha256 "8cd5810664dbc0490a0a99cdbb89e2df74eed050e48ddb1c0b24192a8f5cbae8"
+  sha256 "33af2e9f3d2cc506b91d571914728dcb5449e166bef48dba4a0ef60faa11f2a2"
   license "MIT"
 
   depends_on "node@22"
