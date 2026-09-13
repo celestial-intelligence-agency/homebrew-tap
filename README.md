@@ -10,6 +10,7 @@ brew tap celestial-intelligence-agency/tap
 brew install --cask celestial-intelligence   # Operational console desktop
 brew install --cask attache                  # Household finance desktop
 brew install attache-cli                     # Household finance CLI
+brew install rw                              # Roger Wilco janitor (`rw`)
 ```
 
 ## Available
@@ -19,6 +20,7 @@ brew install attache-cli                     # Household finance CLI
 | `celestial-intelligence` | Cask | Operational console desktop app (Apple Silicon) |
 | `attache` | Cask | Local-first household finance desktop app (Apple Silicon) |
 | `attache-cli` | Formula | Household finance CLI (`attache` command) |
+| `rw` | Formula | Roger Wilco workspace janitor (`rw`) |
 
 Planned: `lens-cli`, `geodesic` (also installs `geo`).
 
@@ -40,3 +42,4 @@ Casks and formulas are auto-bumped from their upstream repos on release:
 - `celestial-intelligence` cask — bumped from [celestial-orchestration](https://github.com/celestial-intelligence-agency/celestial-orchestration) on each `desktop-v*` release.
 - `attache` cask — bumped from [attache](https://github.com/dasysad/attache) on each `desktop-v*` release.
 - `attache-cli` formula — manually bumped on `v*` tags for now.
+- `rw` formula — bumped from [roger-wilco](https://github.com/celestial-intelligence-agency/roger-wilco) on `rw-v*` tags.
