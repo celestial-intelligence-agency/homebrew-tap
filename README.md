@@ -20,7 +20,7 @@ brew install rw                              # Roger Wilco janitor (`rw`)
 | `celestial-intelligence` | Cask | Operational console desktop app (Apple Silicon) |
 | `attache` | Cask | Local-first household finance desktop app (Apple Silicon) |
 | `attache-cli` | Formula | Household finance CLI (`attache` command) |
-| `rw` | Formula | Roger Wilco workspace janitor (`rw`). Private GitHub release — set `HOMEBREW_GITHUB_API_TOKEN`. |
+| `rw` | Formula | Roger Wilco workspace janitor (`rw`) |
 
 Planned: `lens-cli`, `geodesic` (also installs `geo`).
 
