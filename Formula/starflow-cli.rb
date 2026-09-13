@@ -1,9 +1,9 @@
 class StarflowCli < Formula
   desc "Starflow orchestrator CLI — `sf` (and `starflow` alias)"
   homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
-  version "0.1.0"
+  version "0.1.1"
   url "https://downloads.celestialintelligence.co/starflow-cli/sf-v#{version}/starflow-cli-aarch64.tar.gz"
-  sha256 "ab4295589681a29fa9a9d2dac7b045f71b95855ed1427895122cf61a910d5b7c"
+  sha256 "2803b8808199cf5bb71197f6bc56405f0360f443441b95da3e54b0da291004a0"
   license "MIT"
 
   depends_on "node@22"
