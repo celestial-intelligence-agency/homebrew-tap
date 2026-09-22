@@ -1,9 +1,9 @@
 class StarflowCli < Formula
   desc "Starflow durable workflows — `sf` (and `starflow` alias)"
   homepage "https://github.com/celestial-intelligence-agency/starflow"
-  version "0.1.7"
+  version "0.1.8"
   url "https://downloads.celestialintelligence.co/starflow-cli/sf-v#{version}/starflow-cli-aarch64.tar.gz"
-  sha256 "5670144e350a15d6a4403640b91ae0b943836f249fef9507a852c1007d77cf0d"
+  sha256 "f2541e83c3cc0275be03ce2af5865e35f158fee5583a953f8e9bab23fa974505"
   license "AGPL-3.0-only"
 
   depends_on "node@24"
