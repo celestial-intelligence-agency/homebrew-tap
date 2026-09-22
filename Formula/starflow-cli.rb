@@ -1,40 +1,46 @@
 class StarflowCli < Formula
-  desc "Starflow orchestrator CLI — `sf` (and `starflow` alias)"
-  homepage "https://github.com/celestial-intelligence-agency/celestial-orchestration"
-  version "0.1.2"
+  desc "Starflow durable workflows — `sf` (and `starflow` alias)"
+  homepage "https://github.com/celestial-intelligence-agency/starflow"
+  version "0.1.7"
   url "https://downloads.celestialintelligence.co/starflow-cli/sf-v#{version}/starflow-cli-aarch64.tar.gz"
-  sha256 "d111cf52197c25816ddd0aaf37c12f256cca2223dcaa3fe1de4e2a536d62c3e1"
-  license "MIT"
+  sha256 "5670144e350a15d6a4403640b91ae0b943836f249fef9507a852c1007d77cf0d"
+  license "AGPL-3.0-only"
 
-  depends_on "node@22"
+  depends_on "node@24"
   depends_on arch: :arm64
 
   def install
-    # Tarball contains a pnpm-deployed @celestial/starflow-cli with its
-    # arm64-resolved node_modules (built on macos-latest per
-    # build-starflow-cli.yml). Brew has already extracted it; move
-    # everything into libexec and write thin bash wrappers in bin/.
+    # The tarball is `pnpm deploy --prod` of @celestial/starflow-cli
+    # (scripts/release-brew.mjs in the starflow repository): dist/ plus
+    # production node_modules. Brew has already extracted it; move it into
+    # libexec and write thin wrappers in bin/.
     #
-    # Do NOT `cd` into libexec before exec — some subcommands rely on
-    # process.cwd() being the user's project dir (starflow.yaml lookup,
-    # relative worktree paths, …). Invoke node with the absolute path
-    # so cwd stays as the user's dir; Node resolves node_modules via
-    # dist/cli.js's script location.
+    # Do not `cd` into libexec before exec: commands read starflow.yaml and
+    # resolve paths from the user's working directory. Node finds
+    # node_modules from dist/cli.js's own location.
     libexec.install Dir["*"]
 
     (bin/"sf").write <<~EOS
       #!/bin/bash
-      export PATH="#{Formula["node@22"].opt_bin}:$PATH"
+      export PATH="#{Formula["node@24"].opt_bin}:$PATH"
       exec node "#{libexec}/dist/cli.js" "$@"
     EOS
 
-    # `starflow` is the long-form alias of `sf` — same binary, same behavior.
+    # `starflow` is the long-form alias of `sf`.
     bin.install_symlink "sf" => "starflow"
   end
 
   test do
-    # `sf` with no args prints usage and exits with non-zero (per convention);
-    # match on the header so we know we invoked correctly.
+    (testpath/"starflow.yaml").write <<~YAML
+      name: brew-test
+      pipelines:
+        hello:
+          triggers: [{ type: manual }]
+          steps:
+            greet:
+              run: echo hello
+    YAML
     assert_match "starflow", shell_output("#{bin}/sf --help 2>&1", 0).downcase
+    assert_match "Valid starflow config", shell_output("#{bin}/sf validate 2>&1")
   end
 end
